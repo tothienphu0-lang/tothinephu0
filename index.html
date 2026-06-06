@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Dự Án Cá Nhân - Tô Thiên Phú</title>
+    <style>
+        /* --- RESET & FONTS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* --- PORTFOLIO SECTION CẤU TRÚC --- */
+        .portfolio-section {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 40px;
+            margin-bottom: 35px;
+            border-left: 6px solid #0056b3; /* Màu xanh UET làm điểm nhấn chủ đạo */
+            transition: transform 0.2s;
+        }
+
+        .portfolio-section:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Định dạng tiêu đề chính */
+        .section-title {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #0056b3;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #eef2f5;
+            padding-bottom: 10px;
+        }
+
+        /* --- BỐ CỤC CHIA CỘT (NỘI DUNG VÀ ẢNH) --- */
+        .section-content {
+            display: table;
+            width: 100%;
+        }
+
+        .text-block {
+            display: table-cell;
+            width: 55%;
+            vertical-align: top;
+            padding-right: 30px;
+        }
+
+        .image-block {
+            display: table-cell;
+            width: 45%;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            border: 1px solid #e1e8ed;
+        }
+
+        /* --- CHI TIẾT ĐỊNH DẠNG NỘI DUNG --- */
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            background-color: #e8f4fd;
+            color: #1da1f2;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .badge.danger {
+            background-color: #fdf2f2;
+            color: #e02424;
+        }
+
+        .text-block p {
+            margin-bottom: 15px;
+            font-size: 14.5px;
+            color: #4a5568;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #f8fafc;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+            border-left: 3px solid #cbd5e1;
+            font-style: italic;
+            font-size: 13.5px;
+        }
+
+        /* Cấu trúc đoạn văn bản kết luận liền mạch */
+        .conclusion-text p {
+            margin-bottom: 18px;
+            text-indent: 20px;
+        }
+
+        /* --- RESPONSIVE TRÊN THIẾT BỊ DI ĐỘNG --- */
+        @media (max-width: 768px) {
+            .section-content, .text-block, .image-block {
+                display: block;
+                width: 100%;
+            }
+            .text-block {
+                padding-right: 0;
+                margin-bottom: 25px;
+            }
+            .portfolio-section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="portfolio-section">
+            <h2 class="section-title">HIỆU QUẢ CỦA AI</h2>
+            <div class="section-content">
+                <div class="text-block">
+                    <span class="badge">Ưu điểm nổi bật</span>
+                    <p><strong>Công cụ đắc lực trong nghiên cứu:</strong> Giúp định vị và trích xuất cực kỳ nhanh chóng các thông số cốt lõi (dung lượng, số chu kỳ sạc,...) từ hệ thống tài liệu học thuật chuyên sâu mà không cần người học phải đọc thủ công toàn bộ bài báo dài hàng chục trang.</p>
+                    <p><strong>Cái nhìn đa chiều:</strong> Khả năng tự động tổng hợp thông tin, số liệu dưới dạng bảng biểu so sánh trực quan, hỗ trợ đắc lực cho người nghiên cứu dễ dàng đối chiếu, phân tích số liệu từ nhiều nguồn khác nhau một cách hệ thống.</p>
+                </div>
+                <div class="image-block">
+                    <img src="hieu-qua-ai.png" alt="Minh họa Hiệu quả của AI trong nghiên cứu">
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-section" style="border-left-color: #e02424;">
+            <h2 class="section-title" style="color: #e02424;">HẠN CHẾ VÀ GIẢI PHÁP</h2>
+            <div class="section-content">
+                <div class="text-block">
+                    <span class="badge danger">Hạn chế cần lưu ý</span>
+                    <p><strong>Rủi ro sai lệch dữ liệu:</strong> Trong một số trường hợp phức tạp, AI vẫn có khả năng trích xuất nhầm lẫn các thông số kỹ thuật hoặc số lượng mẫu thí nghiệm do chưa hiểu hết ngữ cảnh khoa học sâu sâu.</p>
+                    <span class="badge" style="background-color: #edfcf2; color: #0e6245;">Giải pháp khắc phục</span>
+                    <p><strong>Double-check (Kiểm tra thủ công):</strong> Việc rà soát và kiểm tra lại thủ công các con số trong phần <em>"Methodology" (Phương pháp nghiên cứu)</em> của bài báo gốc là yêu cầu vô cùng quan trọng và cần thiết để đảm bảo tính chính xác tuyệt đối cũng như giữ vững tính liêm chính học thuật.</p>
+                </div>
+                <div class="image-block">
+                    <img src="han-che-giai-phap.png" alt="Minh họa Giải pháp kiểm chứng dữ liệu">
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-section" style="border-left-color: #2b6cb0;">
+            <h2 class="section-title" style="color: #2b6cb0;">TỔNG KẾT PORTFOLIO</h2>
+            <div class="section-content">
+                <div class="text-block conclusion-text" style="width: 100%; padding-right: 0; display: block;">
+                    <p>Hành trình vừa qua đã giúp em bứt phá và tích lũy được chuỗi kỹ năng số vượt bậc — từ xử lý dữ liệu, tối ưu hóa tìm kiếm học thuật cho đến khai thác AI chuyên sâu. Việc lần đầu tiên tự tay thiết kế một website cá nhân bằng Google Sites tuy là một cột mốc nhỏ, nhưng là minh chứng rõ ràng: không có công nghệ nào là quá khó nếu chúng ta chủ động dấn thân.</p>
+                    
+                    <p>Những kỹ năng này không chỉ bổ trợ tức thì cho việc học, mà còn là bệ phóng để em thích nghi với môi trường số hóa toàn cầu. Giá trị lớn nhất em nhận được chính là tư duy chủ động tìm kiếm giải pháp, thay vì phụ thuộc vào những chỉ dẫn có sẵn.</p>
+                    
+                    <p>Đồng thời, học phần cũng định hình trong em tư duy sử dụng AI có trách nhiệm: nghiêm túc kiểm chứng thông tin, tôn trọng bản quyền và trích dẫn khoa học. Việc trực tiếp nghiên cứu các ứng dụng của AI trong khoa học tự nhiên và kỹ thuật hiện đại đã giúp em nhận ra: AI không còn là câu chuyện của tương lai, mà chính là công cụ cốt lõi của thực tại.</p>
+                    
+                    <div class="highlight-box">
+                        Học phần đã khép lại, nhưng tư duy mở và hành trình công nghệ thì vừa mới bắt đầu. Em tin rằng, việc làm chủ công nghệ và cộng tác thông minh cùng AI sẽ là lợi thế cạnh tranh tuyệt đối của bản thân trong kỷ nguyên số.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
